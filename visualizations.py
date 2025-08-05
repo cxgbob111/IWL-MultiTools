@@ -6,6 +6,19 @@ import plotly.graph_objects as go
 import matplotlib.pyplot as plt
 from utils.helpers import get_jump_years
 
+
+import matplotlib.font_manager as fm
+import os
+
+# 加载字体文件
+font_path = os.path.join("fonts", "NotoSansCJKsc-Regular.otf")
+prop = fm.FontProperties(fname=font_path)
+
+# 全局设置字体
+plt.rcParams['font.family'] = prop.get_name()
+plt.rcParams['axes.unicode_minus'] = False  # 解决负号显示问题
+
+
 plt.rcParams['font.sans-serif'] = ['SimHei', 'Microsoft YaHei', 'Arial Unicode MS']; plt.rcParams['axes.unicode_minus'] = False
 
 
